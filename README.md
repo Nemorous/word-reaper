@@ -1,42 +1,28 @@
-Word Reaper 🧙🔪
+**Word Reaper** 🧙🔪
 
 Extract & Forge Wordlists for Password Cracking.
 
 Word Reaper is a flexible Python-based wordlist generation and manipulation utility. Designed with cybersecurity and red teaming in mind, it allows scraping, merging, mutation, and combining of words for password cracking tools.
 
-Features
+**Features**
 
-Feature
+--method html/github/file : Scrape HTML, GitHub repos, or local files
 
-Description
+--ascii-art : Displays a Reaper ASCII art banner
 
---method html/github/file
+--mentalize : Mutate wordlists like Mentalist tool
 
-Scrape HTML, GitHub repos, or local files
+--merge : Merge multiple wordlists into one
 
---ascii-art
+--combinator : Hashcat-style combinator mode (word1 + word2)
 
-Displays a Reaper ASCII art banner
-
---mentalize
-
-Mutate wordlists like Mentalist tool
-
---merge
-
-Merge multiple wordlists into one
-
---combinator
-
-Hashcat-style combinator mode (word1 + word2)
-
-Installation
+**Installation**
 
 git clone https://github.com/Nemorous/word-reaper.git
 cd word-reaper
 pip install -r requirements.txt
 
-Usage Examples
+**Usage Examples**
 
 🔗 Scraping:
 
@@ -76,29 +62,7 @@ Underscores / Spaces: my_password, my password
 
 Pattern Appending: ?a, ?s, ?d tokens left/right
 
-File Structure
-
-word-reaper/
-├── word_reaper.py         # Main CLI script
-├── requirements.txt       # Project dependencies
-├── README.md              # Project overview
-│
-├── scraper/               # Scraper modules
-│   ├── file_loader.py     # Local file input
-│   ├── github_scraper.py  # GitHub scraping logic
-│   └── html_scraper.py    # HTML tag parsing
-│
-└── utils/                 # Utility modules
-    ├── ascii.py           # Banner printer
-    ├── ascii_art.py       # Reaper scythe art
-    ├── cleaner.py         # Wordlist normalizer
-    ├── formatter.py       # Stats + output
-    ├── permutator.py      # All mutation logic
-    ├── merge.py           # Wordlist merger
-    └── combinator.py      # Wordlist combinator logic
-
-
-Requirements
+**Requirements**
 
 colorama
 beautifulsoup4
@@ -108,7 +72,7 @@ Install via pip install -r requirements.txt
 
 Credits
 
-Created by d4rkfl4m3z
+**Created by d4rkfl4m3z**
 
 Inspired by Mentalist, Hashcat, CeWL, and other tools
 
