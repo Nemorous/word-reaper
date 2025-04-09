@@ -6,15 +6,15 @@ Word Reaper is a flexible Python-based wordlist generation and manipulation util
 
 **Features**
 
---method html/github/file : Scrape HTML, GitHub repos, or local files
+--method html/github/file :: Scrape HTML, GitHub repos, or local files
 
---ascii-art : Displays a Reaper ASCII art banner
+--ascii-art :: Displays a Reaper ASCII art banner
 
---mentalize : Mutate wordlists like Mentalist tool
+--mentalize :: Mutate wordlists like Mentalist tool
 
---merge : Merge multiple wordlists into one
+--merge :: Merge multiple wordlists into one
 
---combinator : Hashcat-style combinator mode (word1 + word2)
+--combinator :: Hashcat-style combinator mode (word1 + word2)
 
 **Installation**
 
