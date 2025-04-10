@@ -7,6 +7,14 @@
 
 ## [1.0.0] - 2025-04-10
 ### Added
-- Initial release of Word Reaper with HTML, GitHub, and file scraping.
-- Wordlist mutation features (mentalize, leetspeak, toggles, masks).
+- Initial release of Word Reaper with HTML, GitHub, and Local file scraping
+- Wordlist mutation features (leetspeak, case toggles, underscores, spaces, hyphens)
+- HTML tag-based scraping with class and ID filtering
+- GitHub raw wordlist pulling
+- Hashcat-style permutation features (?a ?d ?s ?l ?u)
+- Merge unlimited wordlists & sort/clean them on the fly
+- Hashcat-style combinator mode to combine words
+- Synchronize mode (prepend and append permutation chars at the same time)
+- Hashcat-style increment mode
+- ASCII art mode
 
