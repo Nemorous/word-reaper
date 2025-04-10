@@ -1,85 +1,99 @@
-**WordReaper v1.0.0**
+☠️ **WordReaper v1.0.0**
 
 ⚠️ **NOTICE: This project is in early development and not yet ready for production use. Features may change, break, or be incomplete. Use at your own risk.**
 
-Extract & Forge Wordlists for Password Cracking.
 
-Word Reaper is a flexible Python-based wordlist generation and manipulation utility. Designed with cybersecurity and red teaming in mind, it allows scraping, merging, mutation, and combining of words for password cracking tools.
+> Extract & Forge Wordlists for Password Cracking  
+> By `d4rkfl4m3z`
 
-**Features**
+![screenshot](screenshots/banner.jpg)
 
---method html/github/file :: Scrape HTML, GitHub repos, or local files
+---
 
---ascii-art :: Displays a Reaper ASCII art banner
+## 💡 What is Word Reaper?
 
---mentalize :: Mutate wordlists like Mentalist tool
+**WordReaper** is a powerful, modular tool for generating, mutating, and combining wordlists — ideal for use in password cracking and CTFs.
 
---merge :: Merge multiple wordlists into one
+It supports:
 
---combinator :: Hashcat-style combinator mode (word1 + word2)
+- 🕸️ HTML scraping (with tag/class filtering)
+- 🐙 GitHub/Gist wordlist pulling (`raw.githubusercontent.com` and `gist.githubusercontent.com`)
+- 📁 Local file loading and mentalist-style mutations
+- 🔄 Leetspeak, case toggling, mask-based mutations
+- ⚔️ Merging and combining wordlists like a pro
 
-**Installation**
+---
 
-git clone https://github.com/Nemorous/word-reaper.git
-cd word-reaper
-pip install -r requirements.txt
+## ⚙️ Usage
 
-**Usage Examples**
+### 📥 HTML Scraping
+```bash
+python3 word_reaper.py --method html --url https://example.com --tag a --class content
+```
 
-🔗 Scraping:
+### 🐙 GitHub Scraping
+Supports both GitHub raw and Gist raw URLs:
+```bash
+python3 word_reaper.py --method github --url https://raw.githubusercontent.com/username/repo/main/file.txt
+python3 word_reaper.py --method github --url https://gist.githubusercontent.com/username/gistid/raw/commitid/file.txt
+```
 
-# HTML scraping
-python3 word_reaper.py --method html --url https://example.com --tag p --class content
-
-# GitHub scraping
-python3 word_reaper.py --method github --url https://github.com/user/repo
-
-# Local file loading
+### 📁 Local File Loading
+```bash
 python3 word_reaper.py --method file --input wordlist.txt
+```
 
-🔪 ASCII Art:
+---
 
+## 🧠 Wordlist Mutations
+
+```bash
+python3 word_reaper.py --mentalize --input input.txt --output mutated.txt \
+--leet --toggle --underscores --append-mask ?d?d --increment
+```
+
+Supports:
+- ✅ Leetspeak (`--leet`)
+- ✅ Case toggling (`--toggle`)
+- ✅ Separators: `--underscores`, `--spaces`, `--hyphens`)
+- ✅ Masking: `--append-mask`, `--prepend-mask`, `--synchronize`, `--increment`
+
+---
+
+## 🧰 Other Features
+
+### 🪓 ASCII Art
+```bash
 python3 word_reaper.py --ascii-art
+```
 
-🧠 Mentalist-style Wordlist Mutations:
+### 📦 Merge Wordlists
+```bash
+python3 word_reaper.py --merge file1.txt file2.txt file3.txt ... -o merged.txt
+```
 
-python3 word_reaper.py --mentalize --input base.txt --output mutated.txt \
-  --leet --toggle --underscores --spaces
+### ⚔️ Combinator
+```bash
+python3 word_reaper.py --combinator adjectives.txt nouns.txt -o combos.txt
+```
 
-✨ Merge Mode:
+---
 
-python3 word_reaper.py --merge rockyou.txt custom.txt leaked.txt --output merged.txt
+## 📝 Changelog
 
-🤾 Combinator Mode:
+See [`CHANGELOG.md`](CHANGELOG.md)
 
-python3 word_reaper.py --combinator adjectives.txt nouns.txt --output combos.txt
+---
 
-Mutation Logic (Mentalist Mode)
-
-Leetspeak: a → @, e → 3, i → 1, etc
-
-Case Toggling: word → Word, wORd, etc
-
-Underscores / Spaces: my_password, my password
-
-Pattern Appending: ?a, ?s, ?d tokens left/right
-
-**Requirements**
-
-colorama
-beautifulsoup4
-requests
-
-Install via pip install -r requirements.txt
-
-Credits
-
-**Created by d4rkfl4m3z**
-
-Inspired by Mentalist, Hashcat, CeWL, and other tools
-
-License
+## 📁 License
 
 MIT
 
-Happy Reaping ⚰️ 🪩
+---
+
+## 🤝 Contributions
+
+PRs and issues welcome! Add new scrapers, modules, or mutation strategies.
+
+Made with ☕ and 🔥 By d4rkfl4m3z
+
