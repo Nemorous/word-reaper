@@ -12,21 +12,21 @@
 
 ## 💡 What is Word Reaper?
 
-**WordReaper** is a powerful, modular tool for generating, mutating, and combining wordlists — ideal for use in password cracking and CTFs.
+**WordReaper** is a powerful, modular tool for generating, mutating, and combining wordlists — ideal for use in redteaming and CTFs.
 
 It supports:
 
-- 🕸️ HTML scraping (with tag/class filtering)
+- 🕸️ HTML scraping (with tag/class/id filtering)
 - 🐙 GitHub/Gist wordlist pulling (`raw.githubusercontent.com` and `gist.githubusercontent.com`)
 - 📁 Local file loading and mentalist-style mutations
-- 🔄 Leetspeak, case toggling, mask-based mutations
+- 🔄 Hashcat-style mask-based permutations
 - ⚔️ Merging and combining wordlists like a pro
 
 ---
 
 ## ⚙️ Usage
 
-### 📥 HTML Scraping
+### 📥 HTML Scraping with Tag/Class/ID Filtering
 ```bash
 python3 word_reaper.py --method html --url https://example.com --tag a --class content
 ```
@@ -45,7 +45,7 @@ python3 word_reaper.py --method file --input wordlist.txt
 
 ---
 
-## 🧠 Wordlist Mutations
+## 🧠 Wordlist Mutations & Permutations
 
 ```bash
 python3 word_reaper.py --mentalize --input input.txt --output mutated.txt \
@@ -56,18 +56,18 @@ Supports:
 - ✅ Leetspeak (`--leet`)
 - ✅ Case toggling (`--toggle`)
 - ✅ Separators: `--underscores`, `--spaces`, `--hyphens`)
-- ✅ Masking: `--append-mask`, `--prepend-mask`, `--synchronize`, `--increment`
+- ✅ Permutations: `--append-mask`, `--prepend-mask`, `--synchronize`, `--increment`
 
 ---
 
 ## 🧰 Other Features
 
-### 🪓 ASCII Art
+### 🪓 Reaper ASCII Art
 ```bash
 python3 word_reaper.py --ascii-art
 ```
 
-### 📦 Merge Wordlists
+### 📦 Merge Multiple Wordlists
 ```bash
 python3 word_reaper.py --merge file1.txt file2.txt file3.txt ... -o merged.txt
 ```
