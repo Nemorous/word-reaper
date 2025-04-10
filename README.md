@@ -1,4 +1,7 @@
-☠️ **WordReaper v1.0.0**
+
+
+<h1 align="left">WordReaper v1.0.0 <img src="assets/scythe.png" width="64"/></h1>
+
 
 ⚠️ **NOTICE: This project is in early development and not yet ready for production use. Features may change, break, or be incomplete. Use at your own risk.**
 
