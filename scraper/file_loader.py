@@ -1,5 +1,3 @@
-
-
 def load(file_path):
     print(f"Loading words from file: \n{file_path}")
     words = []
