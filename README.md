@@ -6,7 +6,7 @@
 ⚠️ **NOTICE: This project is in early development and not yet ready for production use. Features may change, break, or be incomplete. Use at your own risk.**
 
 
-> Extract & Forge Wordlists for Password Cracking  
+> Reap & Forge Wordlists for Password Cracking  
 > By `d4rkfl4m3z`
 
 ![screenshot](screenshots/banner.jpg)
