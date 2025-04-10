@@ -1,9 +1,9 @@
 import argparse
 import sys
-from scraper import html_scraper, github_scraper, file_loader
-from utils import cleaner, formatter, permutator
-import utils.ascii_art as ascii_art
-from utils import ascii as banner
+from word_reaper.scraper import html_scraper, github_scraper, file_loader
+from word_reaper.utils import cleaner, formatter, permutator, merge, combinator
+import word_reaper.utils.ascii_art as ascii_art
+from word_reaper.utils import ascii as banner
 
 
 def main():
@@ -19,10 +19,15 @@ def main():
         description="Word Reaper - Extract & Forge Wordlists for Password Cracking",
         epilog="""
 Example usage:
-  python3 word_reaper.py --method html --url https://example.com
+  python3 word_reaper.py --method html --url https://example.com --tag a --class mw-redirect
   python3 word_reaper.py --mentalize --input input.txt --output out.txt --leet --toggle
-  python3 word_reaper.py --merge file1.txt file2.txt -o merged.txt
+  python3 word_reaper.py --merge file1.txt file2.txt ... -o merged.txt
   python3 word_reaper.py --combinator file1.txt file2.txt -o combos.txt
+  python3 word_reaper.py --mentalize --input input.txt --append-mask ?d?d?d --output out.txt
+  python3 word_reaper.py --mentalize --input input.txt --prepend-mask ?s --append-mask ?d?d --output out.txt
+  python3 word_reaper.py --mentalize --input input.txt --prepend-mask ?d?d --append-mask ?s?s --synchronize --output out.txt
+  python3 word_reaper.py --mentalize --input input.txt --append-mask ?d?d?d?d --increment --output out.txt
+  python3 word_reaper.py --mentalize --input input.txt --prepend-mask ?s?s --append-mask ?d?d --increment --synchronize --output out.txt
         """
     )
 
@@ -36,15 +41,28 @@ Example usage:
 
     parser.add_argument('--ascii-art', action='store_true', help='Display the reaper ASCII art')
 
+    # Mentalize options
     parser.add_argument('--mentalize', action='store_true', help='Mutate words like Mentalist')
     parser.add_argument('--leet', action='store_true', help='Apply leetspeak')
     parser.add_argument('--toggle', action='store_true', help='Toggle casing (like hashcat)')
     parser.add_argument('--underscores', action='store_true', help='Insert underscores between words')
     parser.add_argument('--spaces', action='store_true', help='Insert spaces between words')
     parser.add_argument('--hyphens', action='store_true', help='Insert hyphens between words')
-
+    
+    # Mask options (including new ones)
+    parser.add_argument('--append-mask', type=str, 
+                        help='Append a hashcat-style mask (?a, ?d, ?s, ?l, ?u) to each word')
+    parser.add_argument('--prepend-mask', type=str, 
+                        help='Prepend a hashcat-style mask (?a, ?d, ?s, ?l, ?u) to each word')
+    parser.add_argument('--synchronize', action='store_true', 
+                        help='Synchronize prepend and append masks to apply corresponding combinations')
+    parser.add_argument('--increment', action='store_true', 
+                        help='Apply incremental mask lengths (similar to hashcat\'s --increment)')
+    
+    # Other options
     parser.add_argument('--merge', nargs='+', help='Merge and deduplicate multiple wordlists')
     parser.add_argument('--combinator', nargs=2, metavar=('file1', 'file2'), help='Combine words from two files')
+    
 
     args = parser.parse_args()
 
@@ -55,12 +73,13 @@ Example usage:
         print(f"\nWordlist saved to: {args.output}")
         return
 
-    if args.combinator:
+    if args.combinator:        
         words1 = open(args.combinator[0]).read().splitlines()
         words2 = open(args.combinator[1]).read().splitlines()
         combined = permutator.combinatorize(words1, words2)
         formatter.print_stats(combined)
         formatter.save_to_file(combined, args.output)
+        
         print(f"\nWordlist saved to: {args.output}")
         return
 
@@ -68,15 +87,23 @@ Example usage:
         if not args.input:
             print("\nError: --input is required with --mentalize\n")
             sys.exit(1)
+        
         base_words = file_loader.load(args.input)
+        
+        # Call mentalize with all the options
         mutated_words = permutator.mentalize(
             base_words,
             leet=args.leet,
             toggle=args.toggle,
             underscores=args.underscores,
             spaces=args.spaces,
-            hyphens=args.hyphens
+            hyphens=args.hyphens,
+            append_mask=args.append_mask,
+            prepend_mask=args.prepend_mask,
+            synchronize=args.synchronize,
+            increment=args.increment
         )
+        
         formatter.print_stats(mutated_words)
         formatter.save_to_file(mutated_words, args.output)
         print(f"\nWordlist saved to: {args.output}")
@@ -106,7 +133,6 @@ Example usage:
     formatter.save_to_file(cleaned_words, args.output)
 
     print(f"\nWordlist saved to: {args.output}")
-
 
 if __name__ == '__main__':
     main()
