@@ -4,6 +4,7 @@
 ### Fixed
 - Added support for Gist raw URLs (`gist.githubusercontent.com`) in GitHub scraper.
 - Minor improvements to `scrape()` error messaging.
+- Minor improvements to the help menu
 
 ## [1.0.0] - 2025-04-10
 ### Added
