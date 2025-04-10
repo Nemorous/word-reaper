@@ -1,5 +1,7 @@
 **Word Reaper** 🧙🔪
 
+⚠️ **NOTICE: This project is in early development and not yet ready for production use. Features may change, break, or be incomplete. Use at your own risk.**
+
 Extract & Forge Wordlists for Password Cracking.
 
 Word Reaper is a flexible Python-based wordlist generation and manipulation utility. Designed with cybersecurity and red teaming in mind, it allows scraping, merging, mutation, and combining of words for password cracking tools.
