@@ -1,4 +1,4 @@
-**Word Reaper** 🧙🔪
+**WordReaper v1.0.0**
 
 ⚠️ **NOTICE: This project is in early development and not yet ready for production use. Features may change, break, or be incomplete. Use at your own risk.**
 
