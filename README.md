@@ -11,7 +11,7 @@
 > Reap & Forge Wordlists for Password Cracking  
 > By `d4rkfl4m3z`
 
-![screenshot](screenshots/banner.jpg)
+![wordreaper help menu](https://raw.githubusercontent.com/Nemorous/word-reaper/main/screenshots/banner.jpg)
 
 ---
 
