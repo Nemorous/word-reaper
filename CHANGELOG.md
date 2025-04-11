@@ -1,15 +1,16 @@
 # Changelog
 
-## [Unreleased]
+## [1.0.2] - 2025-04-10
 
 ### Fixed
-- Edited `README.md` image links to use raw GitHub URLs for PyPI compatibility
+- Edited `README.md` banner image link to use raw GitHub URL for PyPI compatibility
+- Changed the example usage in the help menu to be more accurate
+- Changed version number to 1.0.2 where appropriate
 
 ## [1.0.1] - 2025-04-10
 ### Fixed
 - Added support for Gist raw URLs (`gist.githubusercontent.com`) in GitHub scraper.
 - Minor improvements to `scrape()` error messaging.
-- Changed the example usage in the help menu to be more accurate
 - Added missing dependencies (requests, beautifulsoup4) to install_requires in setup.py
 - Restructured GitHub repo to enable full functionality as an installable Python package
 - Added setup.py and __init__.py files to appropriate directories to support packaging and module imports
