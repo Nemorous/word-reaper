@@ -6,6 +6,8 @@
 - Minor improvements to `scrape()` error messaging.
 - Changed the example usage in the help menu to be more accurate
 - Added 'requests' and 'beautifulsoup4' to the setup.py for correct requirements installation with pip
+- Restructured GitHub repo to enable full functionality as an installable Python package
+- Added setup.py and __init__.py files to appropriate directories to support packaging and module imports
 
 ## [1.0.0] - 2025-04-10
 ### Added
