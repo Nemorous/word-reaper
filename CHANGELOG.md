@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+- Edited `README.md` image links to use raw GitHub URLs for PyPI compatibility
+
 ## [1.0.1] - 2025-04-10
 ### Fixed
 - Added support for Gist raw URLs (`gist.githubusercontent.com`) in GitHub scraper.
