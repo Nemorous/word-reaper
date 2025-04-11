@@ -32,7 +32,7 @@ It supports:
 ### 🔧 Clone & Install Locally
 
 ```bash
-git clone https://github.com/yourusername/word-reaper.git
+git clone https://github.com/Nemorous/word-reaper.git
 cd word-reaper
 pip install .
 ```
