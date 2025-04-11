@@ -27,6 +27,18 @@ It supports:
 
 ---
 
+## 🚀 Install
+
+### 🔧 Clone & Install Locally
+
+```bash
+git clone https://github.com/yourusername/word-reaper.git
+cd word-reaper
+pip install .
+```
+
+---
+
 ## ⚙️ Usage
 
 ### 📥 HTML Scraping with Tag/Class/ID Filtering
