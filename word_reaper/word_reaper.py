@@ -19,15 +19,15 @@ def main():
         description="Word Reaper - Extract & Forge Wordlists for Password Cracking",
         epilog="""
 Example usage:
-  python3 word_reaper.py --method html --url https://example.com --tag a --class mw-redirect
-  python3 word_reaper.py --mentalize --input input.txt --output out.txt --leet --toggle
-  python3 word_reaper.py --merge file1.txt file2.txt ... -o merged.txt
-  python3 word_reaper.py --combinator file1.txt file2.txt -o combos.txt
-  python3 word_reaper.py --mentalize --input input.txt --append-mask ?d?d?d --output out.txt
-  python3 word_reaper.py --mentalize --input input.txt --prepend-mask ?s --append-mask ?d?d --output out.txt
-  python3 word_reaper.py --mentalize --input input.txt --prepend-mask ?d?d --append-mask ?s?s --synchronize --output out.txt
-  python3 word_reaper.py --mentalize --input input.txt --append-mask ?d?d?d?d --increment --output out.txt
-  python3 word_reaper.py --mentalize --input input.txt --prepend-mask ?s?s --append-mask ?d?d --increment --synchronize --output out.txt
+  wordreaper --method html --url https://example.com --tag a --class mw-redirect
+  wordreaper --mentalize --input input.txt --output out.txt --leet --toggle
+  wordreaper --merge file1.txt file2.txt ... -o merged.txt
+  wordreaper --combinator file1.txt file2.txt -o combos.txt
+  wordreaper --mentalize --input input.txt --append-mask ?d?d?d --output out.txt
+  wordreaper --mentalize --input input.txt --prepend-mask ?s --append-mask ?d?d --output out.txt
+  wordreaper --mentalize --input input.txt --prepend-mask ?d?d --append-mask ?s?s --synchronize --output out.txt
+  wordreaper --mentalize --input input.txt --append-mask ?d?d?d?d --increment --output out.txt
+  wordreaper --mentalize --input input.txt --prepend-mask ?s?s --append-mask ?d?d --increment --synchronize --output out.txt
         """
     )
 
