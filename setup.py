@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='word-reaper',
-    version='1.0.0',
+    version='1.0.1',
     author='d4rkfl4m3z',
     description='Reap & Forge Wordlists for Password Cracking',
     packages=find_packages(),
