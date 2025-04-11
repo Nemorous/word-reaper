@@ -1,7 +1,6 @@
 # Changelog
 
 ## [1.0.2] - 2025-04-10
-
 ### Fixed
 - Edited `README.md` banner image link to use raw GitHub URL for PyPI compatibility
 - Changed the example usage in the help menu to be more accurate
