@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [1.0.1] - 2025-04-10
 ### Fixed
 - Added support for Gist raw URLs (`gist.githubusercontent.com`) in GitHub scraper.
 - Minor improvements to `scrape()` error messaging.
@@ -10,6 +10,8 @@
 - Added setup.py and __init__.py files to appropriate directories to support packaging and module imports
 - Added installation instructions to README.md for local and PyPI usage
 - Updated usage examples in README.md to reflect correct CLI syntax
+- Provided new banner image in README.md with updated usage examples
+- Changed version number to 1.0.1 where appropriate
 
 ## [1.0.0] - 2025-04-10
 ### Added
