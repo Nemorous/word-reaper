@@ -5,7 +5,7 @@
 - Added support for Gist raw URLs (`gist.githubusercontent.com`) in GitHub scraper.
 - Minor improvements to `scrape()` error messaging.
 - Changed the example usage in the help menu to be more accurate
-- Added 'requests' and 'beautifulsoup4' to the setup.py for correct requirements installation with pip
+- Added missing dependencies (requests, beautifulsoup4) to install_requires in setup.py
 - Restructured GitHub repo to enable full functionality as an installable Python package
 - Added setup.py and __init__.py files to appropriate directories to support packaging and module imports
 - Added installation instructions to README.md for local and PyPI usage
