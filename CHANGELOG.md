@@ -4,7 +4,8 @@
 ### Fixed
 - Added support for Gist raw URLs (`gist.githubusercontent.com`) in GitHub scraper.
 - Minor improvements to `scrape()` error messaging.
-- Minor improvements to the help menu
+- Changed the example usage in the help menu to be more accurate
+- Added 'requests' and 'beautifulsoup4' to the setup.py for correct requirements installation
 
 ## [1.0.0] - 2025-04-10
 ### Added
