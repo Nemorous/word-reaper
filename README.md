@@ -48,19 +48,19 @@ pip install word-reaper
 
 ### 📥 HTML Scraping with Tag/Class/ID Filtering
 ```bash
-python3 word_reaper.py --method html --url https://example.com --tag a --class content
+wordreaper --method html --url https://example.com --tag a --class content
 ```
 
 ### 🐙 GitHub Scraping
 Supports both GitHub raw and Gist raw URLs:
 ```bash
-python3 word_reaper.py --method github --url https://raw.githubusercontent.com/username/repo/main/file.txt
-python3 word_reaper.py --method github --url https://gist.githubusercontent.com/username/gistid/raw/commitid/file.txt
+wordreaper --method github --url https://raw.githubusercontent.com/username/repo/main/file.txt
+wordreaper --method github --url https://gist.githubusercontent.com/username/gistid/raw/commitid/file.txt
 ```
 
 ### 📁 Local File Loading
 ```bash
-python3 word_reaper.py --method file --input wordlist.txt
+wordreaper --method file --input wordlist.txt
 ```
 
 ---
@@ -68,7 +68,7 @@ python3 word_reaper.py --method file --input wordlist.txt
 ## 🧠 Wordlist Mutations & Permutations
 
 ```bash
-python3 word_reaper.py --mentalize --input input.txt --output mutated.txt \
+wordreaper --mentalize --input input.txt --output mutated.txt \
 --leet --toggle --underscores --append-mask ?d?d --increment
 ```
 
@@ -84,17 +84,17 @@ Supports:
 
 ### 🪓 Reaper ASCII Art
 ```bash
-python3 word_reaper.py --ascii-art
+wordreaper --ascii-art
 ```
 
 ### 📦 Merge Multiple Wordlists
 ```bash
-python3 word_reaper.py --merge file1.txt file2.txt file3.txt ... -o merged.txt
+wordreaper --merge file1.txt file2.txt file3.txt ... -o merged.txt
 ```
 
 ### ⚔️ Combinator
 ```bash
-python3 word_reaper.py --combinator adjectives.txt nouns.txt -o combos.txt
+wordreaper --combinator adjectives.txt nouns.txt -o combos.txt
 ```
 
 ---
