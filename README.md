@@ -1,8 +1,8 @@
 
 
-<h1 align="left">WordReaper v1.0.2 <img src="assets/scythe.png" width="64"/></h1>
+<h1 align="left">WordReaper v1.0.3 <img src="assets/scythe.png" width="64"/></h1>
 
-[![PyPi version](https://img.shields.io/pypi/v/word-reaper?label=PyPi&color=007acc&style=for-the-badge&logo=false)](https://pypi.org/project/word-reaper/)
+
 
 
 ⚠️ **NOTICE: This project is in early development and not yet ready for production use. Features may change, break, or be incomplete. Use at your own risk.**
