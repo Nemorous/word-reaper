@@ -1,4 +1,4 @@
 colorama
 beautifulsoup4
 requests
-
+tqdm
