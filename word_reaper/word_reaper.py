@@ -1,9 +1,9 @@
 import argparse
 import sys
-from scraper import html_scraper, github_scraper, file_loader
-from utils import cleaner, formatter, permutator, merge, combinator
-import utils.ascii_art as ascii_art
-from utils import ascii as banner
+from word_reaper.scraper import html_scraper, github_scraper, file_loader
+from word_reaper.utils import cleaner, formatter, permutator, merge, combinator
+import word_reaper.utils.ascii_art as ascii_art
+from word_reaper.utils import ascii as banner
 
 def main():
     if '--ascii-art' in sys.argv:
