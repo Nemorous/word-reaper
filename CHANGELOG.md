@@ -1,10 +1,10 @@
 # Changelog
 
-## [1.1.0] - 2025-04-16
+## Unreleased
 ### Added
 - Progress bars to all core operations using `tqdm`
 - Visual feedback during mentalize, combinator, merge, clean, save, and scrape
-
+  
 ### Changed
 - Cleaned up UX for large file handling
 - Improved combinator performance with buffered writes and streaming word generation
