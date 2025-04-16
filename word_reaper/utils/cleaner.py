@@ -1,5 +1,6 @@
 import re
 import unicodedata
+from tqdm import tqdm
 
 def clean_words(word_list):
     """
@@ -12,7 +13,7 @@ def clean_words(word_list):
     """
     cleaned = set()
 
-    for word in word_list:
+    for word in tqdm(word_list, desc="Cleaning words", unit="word"):
         # Normalize and remove diacritics
         word = unicodedata.normalize('NFKD', word)
         word = ''.join([c for c in word if not unicodedata.combining(c)])
@@ -27,4 +28,3 @@ def clean_words(word_list):
             cleaned.add(word)
 
     return sorted(cleaned)
-
