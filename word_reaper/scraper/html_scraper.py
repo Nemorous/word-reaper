@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 def scrape(url, tag, class_name=None, id_name=None):
     print(f"Scraping HTML from: \n{url}")
@@ -12,7 +13,6 @@ def scrape(url, tag, class_name=None, id_name=None):
 
     soup = BeautifulSoup(response.text, 'html.parser')
 
-    # Build tag selector
     if not tag:
         print("No HTML tag specified. Exiting.")
         return []
@@ -25,9 +25,8 @@ def scrape(url, tag, class_name=None, id_name=None):
         elements = soup.find_all(tag)
 
     words = []
-    for elem in elements:
+    for elem in tqdm(elements, desc=f"Extracting <{tag}> elements", unit="tag"):
         text = elem.get_text(separator=' ', strip=True)
         words.extend(text.split())
 
     return words
-
