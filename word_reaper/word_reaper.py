@@ -1,9 +1,9 @@
 import argparse
 import sys
-from word_reaper.scraper import html_scraper, github_scraper, file_loader
-from word_reaper.utils import cleaner, formatter, permutator, merge, combinator
-import word_reaper.utils.ascii_art as ascii_art
-from word_reaper.utils import ascii as banner
+from scraper import html_scraper, github_scraper, file_loader
+from utils import cleaner, formatter, permutator, merge, combinator
+import utils.ascii_art as ascii_art
+from utils import ascii as banner
 
 def main():
     if '--ascii-art' in sys.argv:
@@ -67,6 +67,11 @@ Example usage:
             file2_path=args.combinator[1],
             output_path=args.output
         )
+
+        # Reload the final output file to calculate stats
+        combined = file_loader.load(args.output)
+        formatter.print_stats(combined)
+
         print(f"\nWordlist saved to: {args.output}")
         return
 
