@@ -23,6 +23,7 @@ It supports:
 
 - 🕸️ HTML scraping (with tag/class/id filtering)
 - 🐙 GitHub/Gist wordlist pulling (`raw.githubusercontent.com` and `gist.githubusercontent.com`)
+- 📜 Plaintext URL scraping (EFF wordlists, raw .txt links, etc.)
 - 📁 Local file loading and mentalist-style mutations
 - 🔄 Hashcat-style mask-based permutations
 - ⚔️ Merging and combining wordlists like a pro
@@ -58,6 +59,12 @@ Supports both GitHub raw and Gist raw URLs:
 ```bash
 wordreaper --method github --url https://raw.githubusercontent.com/username/repo/main/file.txt
 wordreaper --method github --url https://gist.githubusercontent.com/username/gistid/raw/commitid/file.txt
+```
+
+### 📜 Plaintext Scraping
+
+```bash
+wordreaper --method text --url https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt -o eff_words.txt
 ```
 
 ### 📁 Local File Loading
