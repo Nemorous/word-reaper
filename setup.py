@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="word-reaper",
-    version="1.0.2",
+    version="1.0.3",
     author="d4rkfl4m3z",
     description="Reap & Forge Wordlists for Password Cracking",
     long_description=long_description,
@@ -20,7 +20,8 @@ setup(
     install_requires=[
         "requests",
         "beautifulsoup4",
-        "colorama"
+        "colorama",
+        "tqdm"
     ],
     entry_points={
         "console_scripts": [
