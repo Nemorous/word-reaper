@@ -10,6 +10,7 @@
 - Improved combinator performance with buffered writes and streaming word generation
 - Adjustments to the help menu to reflect higher accuracy
 - Changed version number to 1.1.0 where applicable
+- Replaced the ASCII banner to match the darker, edgier theme of the Word Reaper tool
 
 ### Dependencies
 - Added: `tqdm` to `requirements.txt`
