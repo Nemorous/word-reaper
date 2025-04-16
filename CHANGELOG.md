@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0] - 2025-04-16
+### Added
+- Progress bars to all core operations using `tqdm`
+- Visual feedback during mentalize, combinator, merge, clean, save, and scrape
+
+### Changed
+- Cleaned up UX for large file handling
+- Improved combinator performance with buffered writes and streaming word generation
+- Adjustments to the help menu to reflect higher accuracy
+- Changed version number to 1.1.0 where applicable
+
+### Dependencies
+- Added: `tqdm` to `requirements.txt`
+
 ## [1.0.2] - 2025-04-10
 ### Fixed
 - Edited `README.md` banner image link to use raw GitHub URL for PyPI compatibility
