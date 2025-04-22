@@ -84,8 +84,8 @@ wordreaper --mentalize --input input.txt --output mutated.txt \
 Supports:
 - ✅ Leetspeak (`--leet`)
 - ✅ Case toggling (`--toggle`)
-- ✅ Separators: `--underscores`, `--spaces`, `--hyphens`)
-- ✅ Permutations: `--append-mask`, `--prepend-mask`, `--increment`
+- ✅ Separators: (`--underscores`, `--spaces`, `--hyphens`)
+- ✅ Permutations: (`--append-mask`, `--prepend-mask`, `--increment`)
 - ✅ Custom masks: (`--custom-mask`)
 
 ---
